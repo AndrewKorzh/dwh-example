@@ -1,0 +1,26 @@
+{
+    "container_name": "x5_margin_plan",
+    "rootdir": "stg-excel/x5_margin_plan/to-dwh/",
+    "table_name": "ods_x5.t_margin_plan",
+    "stg_table_name": "stg_x5.stg_margin_plan",
+    "key": "plant_code,product_group_code,fiscal_year,fiscal_period",
+    "notnull": "plant_code,product_group_code,fiscal_year,fiscal_period",
+    "mode": "mergedelete",
+    "mergedeleteview": "stg_x5.stg_margin_plan",
+    "columns": [
+        ["plant_code", "varchar(40)", "PLANT_CODE"],
+        ["plant_name", "varchar(200)", "PLANT_NAME"],
+        ["product_group_code", "varchar(20)", "PRODUCT_GROUP_CODE"],
+        ["product_group_name", "varchar(200)", "PRODUCT_GROUP_NAME"],
+        ["fiscal_year", "integer", "FISCAL_YEAR"],
+        ["fiscal_period", "integer", "FISCAL_PERIOD"],
+        ["planned_margin_percent", "numeric(10,4)", "PLANNED_MARGIN_PERCENT"],
+        ["planned_margin_amount", "numeric(25,2)", "PLANNED_MARGIN_AMOUNT"],
+        ["planned_gmv", "numeric(25,2)", "PLANNED_GMV"],
+        ["planned_discount_budget", "numeric(25,2)", "PLANNED_DISCOUNT_BUDGET"],
+        ["approval_status", "varchar(20)", "APPROVAL_STATUS"],
+        ["approved_by", "varchar(100)", "APPROVED_BY"],
+        ["approved_dt", "timestamp(0)", "APPROVED_DT"]
+    ],
+    "sql_constraints": []
+}
