@@ -1,0 +1,17 @@
+{
+    "table_name": "t_retail_chain_margin_fact",
+    "distribution_fields": ["retail_chain", "fiscal_year", "fiscal_period"],
+    "key_hash_fields": [
+      "retail_chain", "plant_code", "product_group_code", "fiscal_year", "fiscal_period"
+    ],
+    "sql_script": "t_retail_chain_margin_fact.sql",
+    "schedule": "30 5 * * *",
+    "merge_history_mode": "replace",
+    "period_field": "#full",
+    "dependencies": [
+      "ods_auchan-ods_auchan_t_margin_plan",
+      "ods_lenta-ods_lenta_t_margin_plan",
+      "ods_magnit-ods_magnit_t_margin_plan",
+      "ods_x5-ods_x5_t_margin_plan"
+    ]
+}
